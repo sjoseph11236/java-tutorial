@@ -10,7 +10,7 @@ _The class must match the name of the file in the directory._
   _These terms make-up the main method signature._
 
  - **Public** : This the access modifier to the main method. It has to be public so that Java runtime can execute this method.
- - **Static** : The main method has to static so that JVM cab load the class into memory and call the main method.
+ - **Static** : The main method has to static so that JVM can load the class into memory and call the main method.
  - **Void** : Java main method doesn't return anything. 
  - **String[] args** : The main method single argument of type String array. Also called the Command-Line arguments.
 
