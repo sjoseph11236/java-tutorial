@@ -1,119 +1,96 @@
-// Class must match the name of the file
-// Root
-// Strings[ ] string in array of argumenet
-
-// int - interger
-
-// Javac - Java Complier
-class Main { 
-  //Entry Point of the Application
-  // Public is an Access modifer method can be used globaly
-  // Static is class method rather than instance menthod 
-  //  return type Void is for a method that returns nothing. 
-  // Method Signuture
+class Main {
   public static void main(String[] args) {
-    // Main myMain = new Main();
     Main main = new Main();
-    // System.out.println("Hello World");
-    // add();
-    // Method on the class
-    System.out.println(staticAdd());
-    // Method on the instance
     System.out.println(main.add(2, 3));
+    System.out.println(staticAdd(2, 5));
 
-    // Refering to how man bits for memory allocate
-    // Optimize for scalabilty
-    // Can store 8-bit -128 to 127;
-    // 8 primitives 8 Wrappers data types
-
-    // Primative Data type
+    // Can store up to -128, 127 +/-
+    // 8 bits / 1 byte
     byte myByte = 1;
-    // Has access to methods from number class. 
-    // Class Data type
-    Byte myWrapperByte = 1; 
-    // Can store 16-bit up 3200 +/-
+    Byte myOtherByte = 1;
+
+    // Can store up to 32000 +/-
+    // 16 bits / 2 bytes
     short myShort = 1;
-    Short myWrapperShort = 1;
-    // Can sotre 32-bit about 2 billion.
-    int myVar = 3;    
-    // Interger myWrapperVar = 5;
-    // Can store 64-bit up ...
-    long myLong = 123456;
+    Short myWrapperShort = 2;
+
+    // Can store up to -2147483648 to 2147483647
+    // 32 bits / 4 bytes
+    int myVar = 3;
+    Integer myWrapperVar = 5;
+
+    // Can store up to -9,223,372,036,854,775,807 and 9,223,372,036,854,775,808.
+    // 64 bits / 8 bytes
+    long myLong = 124567;
     Long myWrapperLong = 12345l;
 
-
-
     float myFloat = 2.5f;
-    Float myWrapperFloat = 2.5f;
-    // ....alot for percision
-    double myDouble = 2.34567;
-    Double myWrapperDouble = 2.3456;
+    Float myWrapperFloat = 2.75f;
 
-    // 1-bit  0 - 1;
+    double myDouble = 2.34246;
+    Double myWrapperDouble = 2.3542;
+
+    // 1 bit // 0 - 1
     boolean foo = false;
     Boolean bar = true;
 
     char myChar = 'a';
     Character myWrapperChar = 'B';
 
-    String myString = "Test";
+    String myString = "Error";
 
-    // ==== CONTROL FLOW ====\\
+    // =========CONTROL FLOW========== \\
 
-    if( bar == true)  { 
-      System.out.println("True"); 
-    }
-    // Strings have to be double quotes.
-    else if(!bar) {
+    if (!bar) {
       System.out.println("False");
-    }
-    else { 
-      System.out.println("Something Else");
+    } else if (bar) {
+      System.out.println("True");
+    } else {
+      System.out.println("Who knows?");
     }
 
-    // myVarr++ Adding it after the line is executed
-    // ++myVar Adding it right when the line is executed. 
-
-    if(myVar == 5) {
+    if (myVar == 5) {
       myVar++;
-    }
-    else if(myVar == 6) {
+    } else if (myVar == 6) {
       myVar--;
-    }
-    else { 
-      myVar -= 3; 
+    } else {
+      myVar = 8;
     }
 
-    for(int i = 0; i < myVar; i++) {
+    switch (myString) {
+      case "Test":
+        System.out.println("Its working");
+        break;
+      case "Error":
+        System.out.println("It broke!");
+        return;
+      default:
+        break;
+    }
+
+    // for (let i = 0; i < myVar; i++) {
+    // console.log(i);
+    // }
+
+    for (int i = 0; i < myVar; i++) {
       System.out.println(i);
     }
 
-    while(myVar < 10) {
-      myVar++; 
+    while (myVar < 10) {
+      myVar++;
     }
 
-    // run at atlest once
     do {
       myVar++;
-    }while(myVar < 10);
+    } while (myVar < 10);
 
-    switch(myString) {
-      case "Test":
-        System.out.println("Its Working");
-        break;
-      case " Error":
-        System.out.println("It broke!");
-        break;
-      default: 
-        break;
-    }
   }
-  public static int staticAdd() {
-    int a = 5; 
-    int b = 3; 
-    return a + b; 
+
+  public static int staticAdd(int a, int b) {
+    return a + b;
   }
+
   private int add(int a, int b) {
-    return a + b; 
+    return a + b;
   }
 }

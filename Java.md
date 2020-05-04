@@ -15,7 +15,7 @@ _The class must match the name of the file in the directory._
  - **String[] args** : The main method single argument of type String array. Also called the Command-Line arguments.
 
 ## Key Terms: 
-  - **int** : interger
+  - **int** : integer
   - **javac** : VS code CLI command for ava Complier
 
 
